@@ -1,0 +1,51 @@
+Note: If you see any taboo in my code other than my problem please kindly ignore it.
+
+I got a table. In that table rows are inserted by foreach loop from php and sql database.
+
+[This shows overall table][1]
+
+
+  [1]: https://i.stack.imgur.com/GlsWY.png
+
+This is the code for the foreach loop that shows database
+
+    <?php if($library1['bookPrice'] === '0' || $library1['bookPrice'] === '' ):?>
+        <td id="proposalDiv" >
+          <p>Trade!</p>
+          <form id="tradeForm" method="post">
+            <textarea name="<?php echo htmlspecialchars($count3)?>" id="<?php echo htmlspecialchars($count3)?>" class="proposalBox" cols="45" rows="1"></textarea>
+            <br>
+            <button type="submit" name="proposalButton" value='<?php echo htmlspecialchars($count3)?>'>Submit</button>
+          </form>
+         </td>
+        <?php endif; ?>
+Okay so here you guys see that textarea and submit button in the tradeForm? I want to hide it and only show it when user hover overs the td tag, the one with the id proposalDiv.
+
+So I did this in css:
+
+    /* library */
+    #tradeForm{
+    height: 0;
+    overflow: hidden;
+    }
+
+    #libraryContent td:hover form{
+    height: auto;
+    overflow: visible;
+    }
+
+libraryContent is a wrapper not shown in previous code. It would show a lot of lines which are unnecessary
+
+And this:
+
+    #tradeForm{
+       display: none;
+    }
+
+    #libraryContent td:hover form{
+       display: block;
+    }
+
+And both of the style works but the first row of the table just wont go away. It's like css for hiding that text area and submit button is totally avoiding it and ONLY for first row.
+
+You can check the live website on booktrade.duckdns.org then click on library and hover over trade options. You will see that css works for all the rows except the first one.

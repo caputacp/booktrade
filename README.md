@@ -1,4 +1,4 @@
-Welcome to Booktrade git repository.
+<h2>Welcome to Booktrade git repository.</h2>
 
 Booktrade, as it says, it is platform for trading books where users trade books for books or anything they want. In booktrade books are strictly in physical form as its focus is to find physical form books from different sources. 
 

@@ -13,4 +13,4 @@ At first Booktrade was aimed for students who couldn't find relevant books for t
 5. Book uploading (Only inforamtion about the book you hold, not the book itself)
 6. Edit the information about the book.
 
-This is not an actual commercial project so cut it some slack. There are some security issues that I haven't considered yet nor that I've decided to. <i>Feel free to contribute and improve it. Just make sure you dont push script language in it(Javascript or jquery).</i>  
+This is not an actual commercial project so cut it some slack. There are some security issues that I haven't considered yet nor that I've decided to. <b><i>Feel free to contribute and improve it. Just make sure you dont push script language in it(Javascript or jquery).</i></b>  

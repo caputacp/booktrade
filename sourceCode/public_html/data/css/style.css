@@ -1,0 +1,440 @@
+*{
+  margin: 0;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #333;
+  font-size: 15px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 0;
+}
+
+#content #home button{
+  height: 40px;
+  border-radius: 5px;
+  min-width: 100px;
+  background-color: black;
+  color: white;
+}
+
+body{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+
+#topBarMenu{
+  max-height: 100px;
+}
+
+#topBarMenu, #topBarMenu *{
+  background-color: rosybrown;
+  position: relative;
+  padding: 0;
+  z-index: 3;
+}
+
+#title {
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: bold;
+  color: white;
+  padding-left:  1.3%;
+}
+
+#topBarMenu  ul {
+  width: 100%;
+  display: inline;
+  list-style: none;
+  z-index: 3;
+}
+
+#topBarMenu ul li {
+  text-align: center;
+  display: inline-block;
+  min-width: 100px;
+  line-height: 40px;
+}
+
+#topBarMenu ul li a {
+  color: white;
+}
+
+#topBarMenu ul li ul {
+  position: absolute;
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s max-height;
+}
+
+#topBarMenu li li p{
+  background-color: rosybrown;
+}
+
+#topBarMenu li:hover li:hover p{
+  background-color: rosybrown;
+}
+
+#topBarMenu li li p a{
+  background-color: rosybrown;
+  color: white;
+}
+
+#topBarMenu li:hover li:hover p a{
+  background-color: rosybrown;
+  color: white;
+  font-weight: bold;
+}
+
+#topBarMenu li:hover > ul {
+  left: 0;
+  max-height: 100px;
+  overflow: visible;
+  border-radius: 5px;
+}
+
+
+#topBarMenu ul li > ul li:hover > ul {
+  position: absolute;
+  display: inline;
+  width: 100%;
+}
+
+#toolbarWrapper{
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 0px 5px black;
+
+  /*background: repeating-linear-gradient(
+  -55deg,
+  #eee,
+  #eee 5px,
+  #ddd 5px,
+  #ddd 10px
+);*/
+
+}
+
+#toolbarWrapper form{
+  color: gray;
+  font-size: 1em;
+}
+
+#toolbarWrapper button{
+  height: 20px;
+  border-radius: 2px;
+  color: gray;
+  background-color: white;
+  transition: 0.5s background-color, 0.5s color;
+}
+
+#toolbarWrapper input{
+  font-weight: bold;
+  height: 20px;
+  border-radius: 5px;
+  color: #333;
+  background-color: rgba(255,255,255, 0);
+  box-shadow: 0px 0px 2px black;
+}
+
+#toolbarWrapper button:hover{
+  color: black;
+  font-weight: bold;
+  transition: 0.5s background-color, 0.5s color;
+}
+
+#toolbarWrapper table{
+  height: 40px;
+  margin: auto;
+}
+
+#content{
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+#content > div{
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+#content > div:target{
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  overflow: auto;
+}
+
+#content > div:target:not(#home):not(#libraryContent){
+  padding-top: 2%;
+}
+
+.homediv{
+  min-height: auto;
+  min-width: auto;
+  position: absolute;
+  background-color: rgba(0,0,0,0);
+  background-size: cover;
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.homediv:nth-child(2n+2) p{
+  text-align: left;
+}
+
+.homediv p{
+  padding: 10% 15%;
+  font-size: 20px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 30px;
+  color: gray;
+}
+
+#homedv1{
+  animation: 30s homediv1 infinite;
+}
+
+#homedv2{
+  background-color: rgba(0,0,0,0);
+  animation: 30s homediv2 infinite;
+}
+
+#homedv3{
+  animation: 30s homediv3 infinite;
+}
+
+#homedv4{
+  animation: 30s homediv4 infinite;
+}
+
+#homedv5{
+  animation: 30s homediv5 infinite;
+}
+
+div:target .titleLine {
+  text-align: center;
+  color: #666;
+  font-weight: bold;
+  font-size: 25px;
+  margin: auto auto;
+}
+
+.warning{
+  color: Darkred;
+  font-weight: bold;
+  text-align: center;
+}
+
+.listTable{
+  width: 95%;
+  border-collapse: separate;
+  margin: auto;
+}
+
+.listTable th{
+  height: 70px;
+  font-size: 15px;
+  color: gray;
+  border-bottom: 3px solid lightslategray;
+}
+
+.listTable tbody tr td {
+  padding-left: 30px;
+  height: 50px;
+  border-bottom: 1px solid lightslategray;
+}
+
+.listTable tbody tr td p, .listTable tbody tr td {
+  color: gray;
+  transition: 0.5s background-color, 0.5s color;
+}
+
+.listTable tbody tr:hover td, .listTable tbody tr:hover td *:not(button) {
+  color: gray;
+  transition: 0.5s background-color, 0.5s color;
+}
+
+.listTable tbody tr:last-child td {
+  height: 70px;
+  border-bottom: 0;
+}
+.listTable input{
+  border-radius: 2px;
+  width: 80%;
+  height: 40px;
+  color: gray;
+  background-color: white;
+}
+.listTable button{
+  height: 30px;
+  width: 100px;
+  background-color: skyblue;
+  color: white;
+  font-weight: bold;
+  transition: 0.5s background-color, 0.5s color;
+}
+
+.listTable button:hover{
+
+  background-color: steelblue;
+  transition: 0.5s background-color, 0.5s color;
+}
+
+#bookPage table td{
+  font-size: 1.1em;
+}
+
+#bookPage button{
+  margin: 10px auto;
+  width: auto;
+  height: auto;
+  padding: 5px 20px;
+}
+
+#inbox input{
+  box-shadow: 0px 0px 1px gray;
+  height: auto;
+  padding: 5px;
+}
+
+#bookPageImage {
+  text-align: center;
+}
+
+.flexibleTable{
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  padding: 5% 5%;
+}
+
+#bookPage .flexibleTable td +td {
+  border-bottom: 1px solid lightslategray;
+}
+
+#bookPage .flexibleTable tr:last-child td{
+  border-bottom: 0;
+}
+
+.flexibleTable tr td{
+  text-align: left;
+  margin:0;
+  padding: 2px 0;
+}
+
+.flexibleTable tr td{
+  text-align: left;
+  margin:0;
+  padding: 2px 0;
+}
+
+.flexibleTable *:not(button):not(input){
+  color: gray;
+}
+
+.flexibleTable input{
+  border-radius: 2px;
+  width: 100%;
+  height: 40px;
+  color: gray;
+  background-color: #eee;
+}
+
+.flexibleTable button{
+  border-radius: 2px;
+  height: 40px;
+  color: white;
+  background-color: skyblue;
+  transition: 0.5s background-color, 0.5s color;
+}
+
+.flexibleTable button:hover{
+  background-color: steelblue;
+  transition: 0.5s background-color, 0.5s color;
+}
+
+#userBooks  tbody td:last-child,
+#libraryContent tbody td:last-child,
+#inbox tbody td:last-child{
+  text-align: center;
+  padding: 0;
+  margin: 0 10px;
+}
+
+#logoutContent td {
+  text-align: center;
+}
+
+#logoutContent button {
+  width: 30%;
+}
+
+
+@keyframes homediv1{
+  0%      {opacity:1;}
+  16.66%  {opacity: 1;}
+  33.33%  {opacity: 0;}
+  49.99%  {opacity: 0;}
+  66.65%  {opacity: 0;}
+  83.31%  {opacity: 1;}
+  100%  {opacity: 1;}
+}
+
+@keyframes homediv2{
+  0%      {opacity:0;}
+  16.66%  {opacity: 0;}
+  33.33%  {opacity: 1;}
+  49.99%  {opacity: 0;}
+  66.65%  {opacity: 0;}
+  83.31%  {opacity: 0;}
+  100%  {opacity: 0;}
+}
+
+@keyframes homediv3{
+  0%      {opacity:0;}
+  16.66%  {opacity: 0;}
+  33.33%  {opacity: 0;}
+  49.99%  {opacity: 1;}
+  66.65%  {opacity: 0;}
+  83.31%  {opacity: 0;}
+  100%  {opacity: 0;}
+}
+
+@keyframes homediv4{
+  0%      {opacity:0;}
+  16.66%  {opacity: 0;}
+  33.33%  {opacity: 0;}
+  49.99%  {opacity: 0;}
+  66.65%  {opacity: 1;}
+  83.31%  {opacity: 0;}
+  100%  {opacity: 0;}
+}
+
+@keyframes homediv5{
+  0%      {opacity:0;}
+  16.66%  {opacity: 0;}
+  33.33%  {opacity: 0;}
+  49.99%  {opacity: 0;}
+  66.65%  {opacity: 0;}
+  83.31%  {opacity: 1;}
+  100%  {opacity: 0;}
+}

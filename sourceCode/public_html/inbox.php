@@ -46,7 +46,7 @@ if(isset($_POST["sendReply"])){
       header('Location: #inbox');
 
     }catch(PDOException $e){
-      echo "something wrong";
+      echo "Something went wrong";
 
     }
 
